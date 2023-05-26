@@ -92,3 +92,53 @@ In the collection inventory, inside of the size json, it is looking for the valu
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/tutorial/query-embedded-documents/#specify-match-using-query-operator
 </details>
+
+### Theorical Question 6
+
+Do you know what these queries are doing ?
+
+db.inventory.find( { tags: ["red", "blank"] } )
+
+db.inventory.find( { tags: { $all: ["red", "blank"] } } )
+
+
+<details><summary><b>Answer</b></summary>
+
+![Image](img/matchArrayMongoDB.png "matchArrayMongoDB")
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/query-embedded-documents/#specify-match-using-query-operator
+</details>
+
+### Theorical Question 7
+
+How would you query an array of multiple embedded documents ?
+
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/
+</details>
+
+### Theorical Question 8
+
+How would you execute the equivalent of this in mongoDB ?
+
+SELECT _id, item, status from inventory WHERE status = "A"
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/
+</details>
