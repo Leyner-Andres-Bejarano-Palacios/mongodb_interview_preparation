@@ -142,3 +142,17 @@ https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/
 </details>
+
+### Theorical Question 9
+
+How to enable Retryable Writes
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/core/retryable-writes/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/retryable-writes/
+</details>
