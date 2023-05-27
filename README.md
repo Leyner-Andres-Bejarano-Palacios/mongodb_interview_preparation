@@ -156,3 +156,17 @@ https://www.mongodb.com/docs/manual/core/retryable-writes/
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/core/retryable-writes/
 </details>
+
+### Theorical Question 10
+
+How would you find the closest neighbour in mongoDB
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/
+</details>
