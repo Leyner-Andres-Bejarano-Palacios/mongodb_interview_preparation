@@ -416,3 +416,47 @@ However, if you often only need to retrieve a subset of the documents within the
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/core/data-model-operations/
 </details>
+
+### Theorical Question 26
+
+What is a compound index ?
+
+<details><summary><b>Answer</b></summary>
+
+MongoDB supports compound indexes, where a single index structure holds references to multiple fields
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/index-compound/
+</details>
+
+### Theorical Question 27
+
+what are hashed indexes useful for in monngoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+Hashed indexes support sharding using hashed shard keys. Hashed based sharding uses a hashed index of a field as the shard key to partition data across your sharded cluster.
+
+Using a hashed shard key to shard a collection results in a more even distribution of data.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/index-hashed/
+</details>
+
+### Theorical Question 28
+
+Do you know what the ESR rule is in monngoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+In compound indexes, first it use the exact match, than it sort values and finally it use the range filter, see an example in the source
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/equality-sort-range-rule/
+</details>
