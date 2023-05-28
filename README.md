@@ -302,3 +302,117 @@ To provide durability in the event of a crash, MongoDB uses write ahead logging 
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/tutorial/optimize-query-performance-with-indexes-and-projections/
 </details>
+
+### Theorical Question 19
+
+what is Slot-Based Query  when does mongoDB use it and how do you know if it been used ?
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/core/aggregation-pipeline-optimization/#sbe-title-pipeline-optimizations
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/aggregation-pipeline-optimization/#sbe-title-pipeline-optimizations
+</details>
+
+### Theorical Question 20
+
+Do you know what is a On-Demand Materialized Views ?
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/core/materialized-views/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/materialized-views/
+</details>
+
+### Theorical Question 21
+
+what is a capped collection and when should you use it ?
+
+<details><summary><b>Answer</b></summary>
+
+Capped collections are fixed-size collections that support high-throughput operations that insert and retrieve documents based on insertion order. Capped collections work in a way similar to circular buffers: once a collection fills its allocated space, it makes room for new documents by overwriting the oldest documents in the collection.
+
+if your application only uses recently inserted documents, consider using Capped Collections. 
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/data-modeling-introduction/
+
+https://www.mongodb.com/docs/manual/core/capped-collections/
+</details>
+
+### Theorical Question 22
+
+what is schema validation in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+MongoDB uses a flexible schema model, which means that documents in a collection do not need to have the same fields or data types by default. Once you've established an application schema, you can use schema validation to ensure there are no unintended schema changes or improper data types.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/data-modeling-introduction/
+
+https://www.mongodb.com/docs/manual/core/capped-collections/
+</details>
+
+### Theorical Question 23
+
+how would you join values in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+$lookup (Available starting in MongoDB 3.2)
+
+$graphLookup (Available starting in MongoDB 3.4)
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/data-modeling-introduction/
+
+https://www.mongodb.com/docs/manual/core/capped-collections/
+</details>
+
+### Theorical Question 24
+
+What is sharding in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+MongoDB uses sharding to provide horizontal scaling. These clusters support deployments with large data sets and high-throughput operations. Sharding allows users to partition a collection within a database to distribute the collection's documents across a number of mongod instances or shards.
+
+To distribute data and application traffic in a sharded collection, MongoDB uses the shard key. Selecting the proper shard key has significant implications for performance, and can enable or prevent query isolation and increased write capacity
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/data-model-operations/
+</details>
+
+### Theorical Question 25
+
+What is rolling up in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+You should consider embedding for performance reasons if you have a collection with a large number of small documents. If you can group these small documents by some logical relationship and you frequently retrieve the documents by this grouping, you might consider "rolling-up" the small documents into larger documents that contain an array of embedded documents.
+
+"Rolling up" these small documents into logical groupings means that queries to retrieve a group of documents involve sequential reads and fewer random disk accesses. Additionally, "rolling up" documents and moving common fields to the larger document benefit the index on these fields. There would be fewer copies of the common fields and there would be fewer associated key entries in the corresponding index. See Indexes for more information on indexes.
+
+However, if you often only need to retrieve a subset of the documents within the group, then "rolling-up" the documents may not provide better performance. Furthermore, if small, separate documents represent the natural model for the data, you should maintain that model.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/data-model-operations/
+</details>
