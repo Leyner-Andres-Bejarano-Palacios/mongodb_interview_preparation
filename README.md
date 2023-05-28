@@ -170,3 +170,135 @@ https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/tutorial/geospatial-tutorial/
 </details>
+
+### Theorical Question 11
+
+How can you adjust the level of consistency and availability guarantees as appropriate, such as waiting for stronger consistency guarantees, or loosening consistency requirements to provide higher availability
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/reference/read-concern/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/reference/read-concern/
+</details>
+
+### Theorical Question 12
+
+What types of write concerns do you know ?
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/reference/read-concern-local/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-available/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-majority/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-linearizable/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-snapshot/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/reference/read-concern-local/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-available/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-majority/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-linearizable/
+
+https://www.mongodb.com/docs/manual/reference/read-concern-snapshot/
+</details>
+
+### Theorical Question 13
+
+How do you execute the explain command in mongoDB ?
+
+what information does it provide ?
+
+what is COLLSCAN and a IXSCAN
+
+<details><summary><b>Answer</b></summary>
+
+https://www.mongodb.com/docs/manual/tutorial/analyze-query-plan/
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/analyze-query-plan/
+</details>
+
+### Theorical Question 14
+
+Do you know what is the database profiler
+
+<details><summary><b>Answer</b></summary>
+
+This is a way of finding slow queries, but the problem is that it has an effect on performance so it is off by deafult
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/analyze-query-plan/
+</details>
+
+### Theorical Question 15
+
+Do you know what hint is for
+
+<details><summary><b>Answer</b></summary>
+
+In most cases the query optimizer selects the optimal index for a specific operation; however, you can force MongoDB to use a specific index using the hint() method. Use hint() to support performance testing, or on some queries where you must select a field or field included in several indexes.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/optimize-query-performance-with-indexes-and-projections/
+</details>
+
+### Theorical Question 16
+
+Do you know what hint is for
+
+<details><summary><b>Answer</b></summary>
+
+In most cases the query optimizer selects the optimal index for a specific operation; however, you can force MongoDB to use a specific index using the hint() method. Use hint() to support performance testing, or on some queries where you must select a field or field included in several indexes.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/optimize-query-performance-with-indexes-and-projections/
+</details>
+
+### Theorical Question 17
+
+Hardware configuration got making writes perform better ?
+
+<details><summary><b>Answer</b></summary>
+
+Solid state drives (SSDs) can outperform spinning hard disks (HDDs) by 100 times or more for random workloads.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/optimize-query-performance-with-indexes-and-projections/
+</details>
+
+### Theorical Question 18
+
+Do you know what is journaling ?
+
+<details><summary><b>Answer</b></summary>
+
+To provide durability in the event of a crash, MongoDB uses write ahead logging to an on-disk journal. MongoDB writes the in-memory changes first to the on-disk journal files. If MongoDB should terminate or encounter an error before committing the changes to the data files, MongoDB can use the journal files to apply the write operation to the data files.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/optimize-query-performance-with-indexes-and-projections/
+</details>
