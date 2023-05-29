@@ -460,3 +460,59 @@ In compound indexes, first it use the exact match, than it sort values and final
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/tutorial/equality-sort-range-rule/
 </details>
+
+### Theorical Question 29
+
+Do you know what network hardening is ?
+
+<details><summary><b>Answer</b></summary>
+
+To reduce the risk exposure of the entire MongoDB system, ensure that only trusted hosts have access to MongoDB.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/security-hardening/
+</details>
+
+### Theorical Question 30
+
+Do you know what redact is for in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+The $redact aggregation pipeline operator in MongoDB is used to redact or hide sensitive data from documents. It can be used to redact fields at the current document level, including embedded documents. To include embedded documents and embedded documents within arrays, apply the $cond expression to the embedded documents to determine access for these embedded documents.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/implement-field-level-redaction/
+</details>
+
+### Theorical Question 31
+
+Do you understand why we need replication in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+The $redact aggregation pipeline operator in MongoDB is used to redact or hide sensitive data from documents. It can be used to redact fields at the current document level, including embedded documents. To include embedded documents and embedded documents within arrays, apply the $cond expression to the embedded documents to determine access for these embedded documents.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/implement-field-level-redaction/
+</details>
+
+### Theorical Question 32
+
+Do you understand what mirrored reads are in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+Mirrored reads reduce the impact of primary elections following an outage or planned maintenance. After a failover in a replica set, the secondary that takes over as the new primary updates its cache as new queries come in. While the cache is warming up performance can be impacted.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/replication/#mirrored-reads
+</details>
