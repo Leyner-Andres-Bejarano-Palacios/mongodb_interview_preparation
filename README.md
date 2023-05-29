@@ -633,3 +633,59 @@ hashed distribution means that range-based queries on the shard key are less lik
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#std-label-sharding-mongos-broadcast
 </details>
+
+### Theorical Question 41
+
+Do you know what the Shard Key Cardinality is ?
+
+<details><summary><b>Answer</b></summary>
+
+The cardinality of a shard key determines the maximum number of chunks the balancer can create. Where possible, choose a shard key with high cardinality. A shard key with low cardinality reduces the effectiveness of horizontal scaling in the cluster.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#std-label-sharding-mongos-broadcast
+</details>
+
+### Theorical Question 42
+
+Do you know what a jumbo chunk is and how to avoid it?
+
+<details><summary><b>Answer</b></summary>
+
+In some cases, chunks can grow beyond the 
+specified chunk size
+ but cannot undergo a split. The most common scenario is when a chunk represents a single shard key value. Since the chunk cannot split, it continues to grow beyond the chunk size, becoming a jumbo chunk. These jumbo chunks can become a performance bottleneck as they continue to grow, especially if the shard key value occurs with high frequency.
+
+Refining a collection's shard key allows for a more fine-grained data distribution and can address situations where the existing key has led to jumbo chunks due to insufficient cardinality.
+
+
+To refine a collection's shard key, use the refineCollectionShardKey command. The refineCollectionShardKey adds a suffix field or fields to the existing key to create the new shard key.
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/sharding-data-partitioning/#std-label-jumbo-chunks
+
+https://www.mongodb.com/docs/manual/core/sharding-refine-a-shard-key/
+</details>
+
+### Theorical Question 43
+
+Do you understand why time series collection behave better than normal collection for time series data ?
+
+<details><summary><b>Answer</b></summary>
+
+Compared to normal collections, storing time series data in time series collections improves query efficiency and reduces the disk usage for time series data and secondary indexes.
+
+Time series collections use an underlying columnar storage format and store data in time-order with an automatically created clustered index. 
+
+MongoDB treats time series collections as writable non-materialized views backed by an internal collection. When you insert data, the internal collection automatically organizes time series data into an optimized storage format.
+
+When you query time series collections, you operate on one document per measurement. Queries on time series collections take advantage of the optimized internal storage format and return results faster.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/timeseries-collections/
+</details>
