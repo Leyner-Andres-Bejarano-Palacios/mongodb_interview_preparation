@@ -575,3 +575,61 @@ Use the --bind_ip option to ensure that MongoDB listens for connections from app
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/tutorial/deploy-replica-set/#ip-binding
 </details>
+
+### Theorical Question 37
+
+Do you know what sharding is in  mongodb ?
+
+<details><summary><b>Answer</b></summary>
+
+Sharding is a method for distributing data across multiple machines. MongoDB uses sharding to support deployments with very large data sets and high throughput operations.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/sharding/
+</details>
+
+### Theorical Question 38
+
+Do you know what hedged reads is in  mongodb ?
+
+<details><summary><b>Answer</b></summary>
+
+With hedged reads, the mongos instances route read operations to two replica set members per each queried shard and return results from the first respondent per shard. 
+
+This is a way of dealing with latency
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#hedged-reads
+</details>
+
+### Theorical Question 39
+
+Do you know what a broadcast operation is in mongodb ?
+
+<details><summary><b>Answer</b></summary>
+
+mongos instances broadcast queries to all shards for the collection
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#std-label-sharding-mongos-broadcast
+</details>
+
+### Theorical Question 40
+
+Do you know when a using a hashed index can result in a broadcast operation in mongodb ?
+
+<details><summary><b>Answer</b></summary>
+
+hashed distribution means that range-based queries on the shard key are less likely to target a single shard, resulting in more cluster wide broadcast operations
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/sharded-cluster-query-router/#std-label-sharding-mongos-broadcast
+</details>
