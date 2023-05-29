@@ -516,3 +516,62 @@ Mirrored reads reduce the impact of primary elections following an outage or pla
 <details><summary><b>Source</b></summary>
 https://www.mongodb.com/docs/manual/replication/#mirrored-reads
 </details>
+
+### Theorical Question 33
+
+Who  is the only member in the replica set that receives write operations in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+Primary
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/replica-set-members/
+</details>
+
+### Theorical Question 34
+
+Do you know what read preferences is in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+By default, an application directs its read operations to the primary member in a replica set (i.e. read preference mode "primary"). But, clients can specify a read preference to send read operations to secondaries.
+
+Read preference consists of the  read preference mode
+ and optionally, a tag set list, the maxStalenessSeconds option, and the hedged read option. 
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/read-preference/
+</details>
+
+### Theorical Question 35
+
+What is a Priority 0 Replica Set Members in mongoDB ?
+
+<details><summary><b>Answer</b></summary>
+
+A priority 0 member is a member that cannot become primary and cannot trigger elections. Priority 0 members can acknowledge write operations issued with write concern of w : <number>. For "majority" write concern, the priority 0 member must also be a voting member (i.e. members[n].votes is greater than 0) to acknowledge the write. 
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/core/replica-set-priority-0-member/
+</details>
+
+### Theorical Question 36
+
+How do you use ip binding when deploying a replica in mongodb ?
+
+<details><summary><b>Answer</b></summary>
+
+Use the --bind_ip option to ensure that MongoDB listens for connections from applications on configured addresses.
+
+</details>
+
+<details><summary><b>Source</b></summary>
+https://www.mongodb.com/docs/manual/tutorial/deploy-replica-set/#ip-binding
+</details>
